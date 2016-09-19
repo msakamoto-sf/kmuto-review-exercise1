@@ -14,6 +14,11 @@ ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
 review (2.0.0)
 ```
 
+TeX環境 : 以下の記事参考にTeX Live 2016をインストール。
+
+ * 参考メモ/CentOS7に TeX Live 2016 をインストールして簡単な動作確認をする - Qiita
+   * http://qiita.com/msakamoto_sf/items/78c322cb8656615ce134
+
 ## rbenv, ruby-buildインストール
 
 OSパッケージのRubyと衝突しないよう、rbenvとruby-buildをインストールします。
@@ -132,6 +137,8 @@ $ git add Gemfile Gemfile.lock
 $ git commit -m 'add Gemfile, Gemfile.lock'
 ```
 
+## 動作確認
+
 プロジェクト作成:
 
 ```
@@ -149,6 +156,15 @@ hello/sty/reviewmacro.sty
 hello/config.yml
 hello/Rakefile
 ```
+
+PDF作成：
+
+```
+$ cd hello
+$ bundle exec review-pdfmaker config.yml
+```
+
+-> 無事、デフォルトの `book.pdf` が生成された。
 
 
 # 参考資料
