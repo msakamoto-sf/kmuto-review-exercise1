@@ -232,6 +232,13 @@ Gems included by the bundle:
   * yajl-ruby (1.2.1)
 ```
 
+`config.yml` でハイライト機能を有効にする：
+
+```
+highlight:
+  html: "pygments"
+```
+
 HTMLへの変換：
 
 ```
