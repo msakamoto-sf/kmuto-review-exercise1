@@ -166,6 +166,18 @@ $ bundle exec review-pdfmaker config.yml
 
 -> 無事、デフォルトの `book.pdf` が生成された。
 
+# 練習プロジェクトの紹介と簡単な解説
+
+## ex1-catalog-and-heading
+
+`catalog.yml` と、見出しで色々組み合わせたデモです。
+
+```
+$ bundle exec review-init ex1-catalog-and-heading
+
+$ cd ex1-catalog-and-heading
+$ bundle exec review-pdfmaker config.yml
+```
 
 # 参考資料
 
