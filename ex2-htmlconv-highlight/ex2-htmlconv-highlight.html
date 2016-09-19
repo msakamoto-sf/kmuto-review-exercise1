@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xmlns:ops="http://www.idpf.org/2007/ops" xml:lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <meta name="generator" content="Re:VIEW" />
+  <title>HTMLの章 見出し(1) : リード文</title>
+</head>
+<body>
+<h1><a id="h1"></a><span class="secno">第1章　</span>HTMLの章 見出し(1) : リード文</h1>
+<div class="lead">
+<p>HTMLでのリード文(1)HTMLでのリード文(1)</p>
+<p>HTMLでのリード文(1)HTMLでのリード文(1)</p>
+</div>
+
+<h2><a id="h1-1"></a><span class="secno">1.1　</span>HTMLの節 見出し(1) : 箇条書きサンプル</h2>
+<p>箇条書き：</p>
+<ul>
+<li>item1</li>
+<li>item2<ul>
+<li>item2-1</li>
+</ul>
+</li>
+</ul>
+<div class="emlist-code">
+<pre class="emlist">  リスト中にはemlist入れられなかった・・・。
+  ここで、liとul要素が閉じられてしまうので、
+  &lt;li&gt;... &lt;div&gt;&lt;p&gt;&lt;pre&gt;...&lt;/pre&gt;&lt;/p&gt;&lt;/div&gt; ... &lt;/li&gt;
+  とはならずに、
+  &lt;li&gt;... &lt;/li&gt;&lt;/ul&gt;
+  &lt;div&gt;&lt;p&gt;&lt;pre&gt;...&lt;/pre&gt;&lt;/p&gt;&lt;/div&gt;
+  &lt;ul&gt;&lt;li&gt; ...
+  と分割されてしまう・・・。
+</pre>
+</div>
+<ul>
+<li><ul>
+<li>item2-2<ul>
+<li>item2-2-1</li>
+<li>item2-2-2<ul>
+<li>item2-2-2-1</li>
+<li>item2-2-2-2</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>item3</li>
+</ul>
+<p>箇条書き番号付き(番号付きはネスト不可)：</p>
+<ol>
+<li>item1</li>
+<li>item2</li>
+<li>item3</li>
+</ol>
+<ol>
+<li>とりあえず <code class="inline-code tt"> 1. </code> で揃えておけば、 <code class="inline-code tt"> &lt;ol&gt; - &lt;li&gt; </code> になるため自動で1から連番になります。</li>
+<li>とりあえず <code class="inline-code tt"> 1. </code> で揃えておけば、 <code class="inline-code tt"> &lt;ol&gt; - &lt;li&gt; </code> になるため自動で1から連番になります。</li>
+<li>とりあえず <code class="inline-code tt"> 1. </code> で揃えておけば、 <code class="inline-code tt"> &lt;ol&gt; - &lt;li&gt; </code> になるため自動で1から連番になります。</li>
+</ol>
+<div class="column">
+
+<h2><a id="column-1"></a>HTMLの節レベルのコラム(1) : 識別子で参照できるリスト例</h2>
+<p>HTMLの節レベルのコラム(1)HTMLの節レベルのコラム(1)</p>
+<div class="code">
+<p class="caption">リスト1.1: main.c</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">1</span> <span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">2</span> 
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">3</span> <span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>(<span style="color: #B00040">int</span> argc, <span style="color: #B00040">char</span> <span style="color: #666666">*</span>argv[]) {
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">4</span>   printf(<span style="color: #BA2121">&quot;Hello, World!</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>);
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">5</span>   <span style="color: #008000; font-weight: bold">return</span> <span style="color: #666666">0</span>;
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">6</span> }
+</pre></div>
+</div>
+</div>
+
+<h3><a id="h1-1-1"></a>HTMLの項 見出し(1) : 表の例</h3>
+<p>表の例：</p>
+<div id="envvars" class="table">
+<p class="caption">表1.1: 重要な環境変数</p>
+<table>
+<tr><th>名前            意味</th></tr>
+<tr><td>PATH            コマンドの存在するディレクトリ</td></tr>
+<tr><td>TERM            使っている端末の種類。linux・kterm・vt100など</td></tr>
+<tr><td>LANG            ユーザのデフォルトロケール。日本語ならja_JP.eucJPやja_JP.utf8</td></tr>
+<tr><td>LOGNAME         ユーザのログイン名</td></tr>
+<tr><td>TEMP            一時ファイルを置くディレクトリ。/tmpなど</td></tr>
+<tr><td>PAGER           manなどで起動するテキスト閲覧プログラム。lessなど</td></tr>
+<tr><td>EDITOR          デフォルトエディタ。viやemacsなど</td></tr>
+<tr><td>MANPATH         manのソースを置いているディレクトリ</td></tr>
+<tr><td>DISPLAY         X Window Systemのデフォルトディスプレイ</td></tr>
+</table>
+</div>
+<div class="column">
+
+<h3><a id="column-2"></a>HTMLの項レベルのコラム(1) : 識別子で参照できないリスト例</h3>
+<p>HTMLの項レベルのコラム(1)HTMLの項レベルのコラム(1)</p>
+<div class="emlistnum-code">
+<p class="caption">main()</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">1</span> <span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">2</span> 
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">3</span> <span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>(<span style="color: #B00040">int</span> argc, <span style="color: #B00040">char</span> <span style="color: #666666">*</span>argv[]) {
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">4</span>   printf(<span style="color: #BA2121">&quot;Hello, World!</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>);
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">5</span>   <span style="color: #008000; font-weight: bold">return</span> <span style="color: #666666">0</span>;
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">6</span> }
+</pre></div>
+</div>
+</div>
+
+<h4><a id="h1-1-1-1"></a>HTMLの段 見出し(1) : 引用の例</h4>
+<p>引用の例：</p>
+<blockquote><p>  こんにちは  こんばんは  ハロー</p></blockquote>
+
+<h5><a id="h1-1-1-1-1"></a>HTMLの少段 見出し(1) : 脚注の例</h5>
+<p>こんにちは、サンプルサイト<a id="fnb-exsite" href="#fn-exsite" class="noteref" epub:type="noteref">*1</a>を御覧ください。</p>
+<div class="footnote" epub:type="footnote" id="fn-exsite"><p class="footnote">[*1] 一般的なサンプルサイトURL : http://www.example.com</p></div>
+<h1><a id="h1"></a><span class="secno">第1章　</span>HTMLの章 見出し(2) : リード文</h1>
+<div class="lead">
+<p>HTMLでのリード文(2)HTMLでのリード文(2)</p>
+<p>HTMLでのリード文(2)HTMLでのリード文(2)</p>
+</div>
+
+<h2><a id="h1-1"></a><span class="secno">1.1　</span>HTMLの節 見出し(2) : 箇条書きサンプル2</h2>
+<p>箇条書き番号付き(番号付きはネスト不可)：</p>
+<ol>
+<li>item1</li>
+<li>item2</li>
+</ol>
+<ol>
+<li>番号付きを、途中から始めようとしても、ol要素のstart属性に反映されないため、1から振り直しになります・・・。</li>
+<li>番号付きを、途中から始めようとしても、ol要素のstart属性に反映されないため、1から振り直しになります・・・。</li>
+<li>番号付きを、途中から始めようとしても、ol要素のstart属性に反映されないため、1から振り直しになります・・・。</li>
+</ol>
+<div class="column">
+
+<h2><a id="column-3"></a>HTMLの節レベルのコラム(2) : 識別子で参照できるリスト例</h2>
+<p>HTMLの節レベルのコラム(2)HTMLの節レベルのコラム(2)</p>
+<div class="code">
+<p class="caption">リスト1.2: main.c</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">1</span> <span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">2</span> 
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">3</span> <span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>(<span style="color: #666666">&lt;</span>u<span style="color: #666666">&gt;</span><span style="color: #B00040">int</span> argc, <span style="color: #B00040">char</span> <span style="color: #666666">*</span>argv[]) {<span style="color: #666666">&lt;/</span>u<span style="color: #666666">&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">4</span>   printf(<span style="color: #BA2121">&quot;&lt;i&gt;Hello, World!&lt;/i&gt;</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>);
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">5</span>   <span style="color: #008000; font-weight: bold">return</span> <span style="color: #666666">0</span>;
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">6</span> }
+</pre></div>
+</div>
+</div>
+
+<h3><a id="h1-1-1"></a>HTMLの項 見出し(2) : 表の例</h3>
+<p>表の例：</p>
+<div id="envvars2" class="table">
+<p class="caption">表1.2: 重要な環境変数</p>
+<table>
+<tr><th>名前            意味</th></tr>
+<tr><td>PATH            コマンドの存在するディレクトリ</td></tr>
+<tr><td>TERM            使っている端末の種類。linux・kterm・vt100など</td></tr>
+<tr><td>LANG            ユーザのデフォルトロケール。日本語ならja_JP.eucJPやja_JP.utf8</td></tr>
+<tr><td>LOGNAME         ユーザのログイン名</td></tr>
+<tr><td>TEMP            一時ファイルを置くディレクトリ。/tmpなど</td></tr>
+<tr><td>PAGER           manなどで起動するテキスト閲覧プログラム。lessなど</td></tr>
+<tr><td>EDITOR          デフォルトエディタ。viやemacsなど</td></tr>
+<tr><td>MANPATH         manのソースを置いているディレクトリ</td></tr>
+<tr><td>DISPLAY         X Window Systemのデフォルトディスプレイ</td></tr>
+</table>
+</div>
+<div class="column">
+
+<h3><a id="column-4"></a>HTMLの項レベルのコラム(2) : 識別子で参照できないリスト例</h3>
+<p>HTMLの項レベルのコラム(2)HTMLの項レベルのコラム(2)</p>
+<div class="emlistnum-code">
+<p class="caption">main()</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">1</span> <span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">2</span> 
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">3</span> <span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>(<span style="color: #B00040">int</span> argc, <span style="color: #B00040">char</span> <span style="color: #666666">*</span>argv[]) {
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">4</span>   printf(<span style="color: #BA2121">&quot;Hello, World!</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>);
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">5</span>   <span style="color: #008000; font-weight: bold">return</span> <span style="color: #666666">0</span>;
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">6</span> }
+</pre></div>
+</div>
+</div>
+
+<h4><a id="h1-1-1-1"></a>HTMLの段 見出し(2) : 引用の例</h4>
+<p>引用の例：</p>
+<blockquote><p>  こんにちは  こんばんは  ハロー</p></blockquote>
+
+<h5><a id="h1-1-1-1-1"></a>HTMLの少段 見出し(2) : 脚注の例</h5>
+<p>こんにちは、サンプルサイト<a id="fnb-exsite" href="#fn-exsite" class="noteref" epub:type="noteref">*1</a>を御覧ください。</p>
+</body>
+</html>

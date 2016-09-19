@@ -179,6 +179,66 @@ $ cd ex1-catalog-and-heading
 $ bundle exec review-pdfmaker config.yml
 ```
 
+## ex2-htmlconv-highlight
+
+Pythonの Pygments と pygments.rb による `list` へのシンタックスハイライトのサンプル + HTML出力の実験デモです。
+
+プロジェクト作成:
+
+```
+$ bundle exec review-init ex2-htmlconv-highlight
+```
+
+Python 環境への Pygments のインストール
+
+ * http://pygments.org/
+ * https://github.com/msakamoto-sf/sphinx-rest-exercise1 のPython環境構築で、pyenvで Python 2.7.12 をインストールして、pyenv-virtualenvまでインストールした状態とします。
+
+```
+$ cd ex2-htmlconv-highlight/
+
+### Python 2.7.12 を使った virtualenv "reviewt1" を作成
+$ pyenv virtualenv 2.7.12 reviewt1
+
+### このディレクトリローカルで "reviewt1" を使うよう .python-version を設定
+$ pyenv local 2.7.12/envs/reviewt1
+
+### Pygments をインストール
+$ pip install Pygments
+$ pyenv rehash
+$ pip list
+pip (8.1.2)
+Pygments (2.1.3)
+setuptools (27.2.0)
+wheel (0.30.0a0)
+```
+
+`pygments.rb` のインストール:
+
+ 1. Gemfile に `pygments.rb` を追記
+   * https://github.com/msakamoto-sf/kmuto-review-exercise1/commit/52b9efcd9d673760f664871bc2072a1df3bfd860
+ 2. `bundle install` で追加インストール実行
+
+インストールバージョン：
+
+```
+$ bundle list
+Gems included by the bundle:
+  * bundler (1.13.1)
+  * posix-spawn (0.3.11)
+  * pygments.rb (0.6.3)
+  * review (2.0.0)
+  * rubyzip (1.2.0)
+  * yajl-ruby (1.2.1)
+```
+
+HTMLへの変換：
+
+```
+$ cd ex2-htmlconv-highlight/
+$ bundle exec review-compile --target html ex2-htmlconv-highlight.re > ex2-htmlconv-highlight.html
+```
+
 # 参考資料
 
 本家GitHubのWikiが日本語でわかりやすくまとめられてます。
